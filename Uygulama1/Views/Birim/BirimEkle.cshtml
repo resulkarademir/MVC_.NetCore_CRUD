@@ -1,0 +1,8 @@
+﻿@model Uygulama1.Models.Birimler
+
+<form class="form-group" method="post">
+    <label>Birim Adı</label>
+    @Html.TextBoxFor(x => x.BirimAd, new { @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>

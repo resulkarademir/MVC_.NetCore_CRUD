@@ -1,0 +1,30 @@
+﻿@using Uygulama1.Models;
+@model List<Birimler>
+@{
+
+}
+<br />
+<table class="table table-bordered  text-center align-middle">
+    <tr>
+        <th>Id</th>
+        <th>Departman</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+       <tr>
+           <td>@item.BirimId</td>
+           <td>@item.BirimAd</td>
+            <td>
+                <a class="btn btn-success" asp-area="" asp-controller="Birim" asp-action="BirimSil" asp-route-id="@item.BirimId">Sil</a>
+            </td>
+            <td><a class="btn btn-warning" asp-area="" asp-controller="Birim" asp-action="BirimsGuncelle">Güncelle</a></td>
+            <td><a class="btn btn-info" asp-area="" asp-controller="Birim" asp-action="BirimDetay">Detay</a></td>
+       </tr>
+    }
+</table>
+<br />
+<a class="btn btn-info" asp-area="" asp-controller="Birim" asp-action="BirimEkle">Birim Ekle</a>
