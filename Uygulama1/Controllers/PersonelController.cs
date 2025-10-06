@@ -27,11 +27,20 @@ namespace Uygulama1.Controllers
             return View();
         }
 
-
         [HttpPost]
         public IActionResult PersonelEkle(Personeller p) {
-
+            var per =c.Birimler.Where(x => x.BirimId == p.Birim.BirimId).FirstOrDefault();
+            p.Birim = per;
             c.Personeller.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult PersonelSil(int id) {
+
+
+            var per = c.Personeller.Find(id);
+            c.Personeller.Remove(per);
             c.SaveChanges();
             return RedirectToAction("Index");
         }
