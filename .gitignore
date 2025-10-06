@@ -1,0 +1,44 @@
+# Visual Studio dosyaları
+.vs/
+
+# macOS sistem dosyaları
+.DS_Store
+
+# Node.js bağımlılıkları
+node_modules/
+
+# Log dosyaları
+*.log
+
+# Çevre dosyaları
+.env
+
+# Derleme dizinleri
+/dist
+/build
+
+# Bağımlılık dizinleri
+/vendor
+
+# IDE ve editör klasörleri
+.vscode/
+.idea/
+
+# İşletim sistemi tarafından oluşturulan dosyalar
+Thumbs.db
+ehthumbs.db
+
+# Python bytecode dosyaları
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Derlenmiş C/C++ ikili dosyaları
+*.out
+*.exe
+*.obj
+*.o
+
+# Java class dosyaları
+*.class
