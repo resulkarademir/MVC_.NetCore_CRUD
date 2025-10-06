@@ -1,0 +1,13 @@
+﻿@model Uygulama1.Models.Birimler
+
+<br />
+@using (Html.BeginForm("BirimGuncelle", "Birim", FormMethod.Post))
+{
+    <b>Departman ID:</b>
+    @Html.TextBoxFor(deger =>deger.BirimId,new{@class="form-control"})
+    <br />
+    <b>Departman ID:</b>
+    @Html.TextBoxFor(deger => deger.BirimAd, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-defautl" style="background-color:#ebdede; color:black;">Birim Güncelle</button>
+}

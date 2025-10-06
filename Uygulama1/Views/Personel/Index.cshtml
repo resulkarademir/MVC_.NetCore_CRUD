@@ -1,4 +1,35 @@
-﻿
-@{
-}
-<div>Personeller</div>
+﻿@using Uygulama1.Models;
+@model List<Personeller>
+
+<br />
+<table class="table table-bordered  text-center align-middle">
+    <tr>
+        <th>Id</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+        <th>Birim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.PersonelId</td>
+            <td>@item.PersonelAd</td>
+            <td>@item.PersonelSoyad</td>
+            <td>@item.PersonelSehir</td>
+            <td>@item.Birim.BirimAd</td>
+            <td>
+                <a class="btn btn-success" asp-area="" asp-controller="Birim" asp-action="PersonelSil" asp-route-id="@item.BirimId">Sil</a>
+            </td>
+            <td>
+                <a class="btn btn-warning" asp-area="" asp-controller="Birim" asp-action="PersonelGetir" asp-route-id="@item.BirimId">Güncelle</a>
+            </td>
+            <td><a class="btn btn-info" asp-area="" asp-controller="Birim" asp-action="PersonelDetay">Detay</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a class="btn btn-info" asp-area="" asp-controller="Personel" asp-action="PersonelEkle">Personel Ekle</a>

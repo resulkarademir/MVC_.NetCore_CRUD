@@ -1,0 +1,19 @@
+﻿@model Uygulama1.Models.Personeller
+
+<form class="form-group" method="post">
+    <label>Personel Adı:</label>
+    @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
+    <br />
+    <label>Personel Soyad:</label>
+    @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
+    <br />
+    <label>Personel Şehir:</label>
+    @Html.TextBoxFor(x => x.PersonelSehir, new { @class = "form-control" })
+    <br />
+    <label>Personel Birim:</label>
+    @Html.DropDownListFor(item => item.Birim.BirimId, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+    <br />
+
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>

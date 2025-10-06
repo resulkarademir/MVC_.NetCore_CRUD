@@ -6,8 +6,9 @@ namespace Uygulama1.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=WORKSERVER; database=Uygulama1; integrated security=true; TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("server=WORKSERVER; database=Uygulama1; user id=sa; password=Resul123; TrustServerCertificate=True;");
         }
+
 
         public DbSet<Birimler> Birimler { get; set; }
         public DbSet<Personeller> Personeller { get; set; }
