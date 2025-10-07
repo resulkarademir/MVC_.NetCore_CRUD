@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Uygulama1.Models;
 
 namespace Uygulama1.Controllers
 {
+    [Authorize]
     public class PersonelController : Controller
     {
         Context c= new Context();
@@ -36,10 +38,10 @@ namespace Uygulama1.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult PersonelSil(int id) {
+        public IActionResult PersonelSil(int item) {
 
 
-            var per = c.Personeller.Find(id);
+            var per = c.Personeller.Find(item);
             c.Personeller.Remove(per);
             c.SaveChanges();
             return RedirectToAction("Index");

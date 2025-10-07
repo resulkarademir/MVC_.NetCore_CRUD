@@ -12,5 +12,6 @@ namespace Uygulama1.Models
 
         public DbSet<Birimler> Birimler { get; set; }
         public DbSet<Personeller> Personeller { get; set; }
+        public DbSet<Admin> Adminler { get; set; }
     }
 }

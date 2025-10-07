@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Uygulama1.Models;
 
 namespace Uygulama1.Controllers
@@ -6,6 +7,7 @@ namespace Uygulama1.Controllers
     public class BirimController : Controller
     {
         Context c = new Context();
+        [Authorize]
         public IActionResult Index()
         {
             var degerler = c.Birimler.ToList();
@@ -38,14 +40,24 @@ namespace Uygulama1.Controllers
         public IActionResult BirimGetir(int id)
         {
             var birim = c.Birimler.Find(id);
-            return View("BirimGetir",birim);
+            return View("BirimGetir", birim);
         }
-        public IActionResult BirimGuncelle(Birimler birim) { 
-        
-        var dep=c.Birimler.Find(birim.BirimId);
-            dep.BirimAd=birim.BirimAd;
+        public IActionResult BirimGuncelle(Birimler birim)
+        {
+
+            var dep = c.Birimler.Find(birim.BirimId);
+            dep.BirimAd = birim.BirimAd;
             c.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public IActionResult BirimDetay(int id)
+        {
+            var degerler = c.Personeller.Where(x=> x.BirimId == id).ToList();
+            var brmad= c.Birimler.Where(x=>x.BirimId==id).Select(y=>y.BirimAd).FirstOrDefault();
+            ViewBag.brm = brmad;
+            return View(degerler);
+
         }
     }
 }

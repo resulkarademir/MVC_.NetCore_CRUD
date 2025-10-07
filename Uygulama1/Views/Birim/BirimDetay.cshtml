@@ -1,0 +1,28 @@
+﻿@using Uygulama1.Models;
+@model List<Personeller>
+
+<br />
+
+
+<h2>@ViewBag.brm</h2>
+<br />
+<table class="table table-bordered  text-center align-middle">
+    <tr>
+        <th>Id</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.PersonelId</td>
+            <td>@item.PersonelAd</td>
+            <td>@item.PersonelSoyad</td>
+            <td>@item.PersonelSehir</td>
+        </tr>
+    }
+</table>
+<br />

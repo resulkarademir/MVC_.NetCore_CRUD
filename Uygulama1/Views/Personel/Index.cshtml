@@ -22,7 +22,7 @@
             <td>@item.PersonelSehir</td>
             <td>@item.Birim.BirimAd</td>
             <td>
-                <a class="btn btn-success" asp-area="" asp-controller="Personel" asp-action="PersonelSil" asp-route-id="@item.PersonelId">Sil</a>
+                <a class="btn btn-success" asp-area="" asp-controller="Personel" asp-action="PersonelSil" asp-route-item="@item.PersonelId">Sil</a>
             </td>
             <td>
                 <a class="btn btn-warning" asp-area="" asp-controller="Birim" asp-action="PersonelGetir" asp-route-id="@item.BirimId">Güncelle</a>

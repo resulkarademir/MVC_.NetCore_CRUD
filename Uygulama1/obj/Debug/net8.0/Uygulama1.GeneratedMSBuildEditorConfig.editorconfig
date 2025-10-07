@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Administrator\Desktop\MVC_Project\Uygulama1\Uygulama1
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Administrator/Desktop/MVC_Project/Uygulama1/Uygulama1/Views/Birim/BirimDetay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlyaW1cQmlyaW1EZXRheS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Administrator/Desktop/MVC_Project/Uygulama1/Uygulama1/Views/Birim/BirimEkle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlyaW1cQmlyaW1Fa2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Administrator/Desktop/MVC_Project/Uygulama1/Uygulama1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/MVC_Project/Uygulama1/Uygulama1/Views/Login/GirisYap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cR2lyaXNZYXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Administrator/Desktop/MVC_Project/Uygulama1/Uygulama1/Views/Personel/Index.cshtml]
